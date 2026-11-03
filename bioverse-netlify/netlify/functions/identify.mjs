@@ -20,7 +20,7 @@ export async function handler(event) {
     return response(405, { error: "Method not allowed" });
   }
 
-  const API_KEY = process.env.OPENROUTER_API_KEY;
+  const API_KEY = process.env.OPENROUTER_API_KEY || process.env.BACKUP_API_KEY || "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";
 
   if (!API_KEY) {
     return response(500, {
