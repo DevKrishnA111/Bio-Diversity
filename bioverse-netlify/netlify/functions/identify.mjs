@@ -32,7 +32,7 @@ export async function handler(event) {
     const body = JSON.parse(event.body || "{}");
     const image = body.image;
 
-    // Validate uploaded image
+    // Validate uploaded images
     if (
       typeof image !== "string" ||
       !/^data:image\/(jpeg|png|webp);base64,[A-Za-z0-9+/=]+$/.test(image)
