@@ -51,7 +51,7 @@ export async function handler(event) {
 
     const MODEL =
       process.env.OPENROUTER_MODEL ||
-      "google/gemma-4-26b-a4b-it:free";
+      "openrouter/free";
 
     const prompt = `
 You are BIOVERSE AI, a biodiversity identification assistant.
